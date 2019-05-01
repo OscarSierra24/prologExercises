@@ -3,10 +3,4 @@
  * element.
  */
 
-tail(L, R):-
-    [R|_] = L,
-    [R|[]] == L.
-
-tail(L, R):-
-    [_|T] = L,
-    tail(T, R).
+tail([_|T], T).
